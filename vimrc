@@ -9,6 +9,8 @@ set autoindent " オートインデント
 set smarttab
 set hidden     " 不可視文字を可視化する
 set showmatch  " 対応する括弧などを表示する
+"set virtualedit=all
+set backspace=indent,eol,start
 
 
 " ステータスラインの表示
@@ -25,9 +27,10 @@ filetype off
 
 if has('vim_starting')
   set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 "  set rtp+=$HOME/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~./.vim/bundle'))
+"  call neobundle#rc(expand('$HOME/.vim/bundle/'))
+  call neobundle#begin(expand('$HOME/.vim/bundle/'))
 endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -47,6 +50,14 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1
 " 対応したログに色を付ける
 NeoBundle 'vim-scripts/AnsiEsc.vim'
+" sudo して開く
+NeoBundle 'sudo.vim'
+
+" 入力補完
+if has('lua')
+  NeoBundle 'Shougo/neocomplete'
+endif
+
 
 """ カラースキーム
 " solarized
@@ -59,7 +70,6 @@ NeoBundle 'vim-scripts/moria'
 NeoBundle 'sjl/badwolf'
 
 call neobundle#end()
-filetype plugin indent on
 NeoBundleCheck
 
 
@@ -77,3 +87,5 @@ colorscheme badwolf
 "endif
 
 syntax enable
+
+filetype plugin indent on
