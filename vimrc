@@ -13,9 +13,15 @@ set showmatch  " 対応する括弧などを表示する
 set backspace=indent,eol,start
 
 
+" 文字コード
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
+
+
 " ステータスラインの表示
 set laststatus=2
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set statusline=%<%f\ %m%r%h%w%=%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%4l,%c%V%6P
 "set statusline+=%{fugitive#statusline()}
 
 
@@ -52,6 +58,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 " sudo して開く
 NeoBundle 'sudo.vim'
+" 日本語ヘルプ
+NeoBundle 'vim-jp/vimdoc-ja'
 
 " 入力補完
 if has('lua')
