@@ -46,8 +46,8 @@ NeoBundle 'tpope/vim-endwise'
 " 複数行のコメントを設定する
 NeoBundle 'tomtom/tcomment_vim'
 " インデントを視覚化する
-NeoBundle 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup = 1
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"let g:indent_guides_enable_on_vim_startup = 1
 " 対応したログに色を付ける
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 " sudo して開く
@@ -74,8 +74,9 @@ NeoBundleCheck
 
 
 " 配色
+syntax enable
 set background=dark
-colorscheme badwolf
+colorscheme moria
 "if &term =~ "xterm-256color" || "screen-256color"
 "  set t_Co=256
 "  set t_Sf=[3%dm
@@ -86,6 +87,5 @@ colorscheme badwolf
 "  set t_Sb=[4%dm
 "endif
 
-syntax enable
 
 filetype plugin indent on
