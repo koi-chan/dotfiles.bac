@@ -16,7 +16,7 @@ set backspace=indent,eol,start
 " 文字コード
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
+set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp
 
 
 " ステータスラインの表示
